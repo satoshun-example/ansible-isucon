@@ -2,7 +2,7 @@
 - hosts: imageservers
   gather_facts: no
   sudo: yes
-  sudo_user: isucon
+  sudo_user: vagrant
   tasks:
     - git:
         repo=https://github.com/isucon/isucon5-qualify.git

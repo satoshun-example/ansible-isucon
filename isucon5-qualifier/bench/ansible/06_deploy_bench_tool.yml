@@ -2,7 +2,7 @@
 - hosts: benchservers
   gather_facts: no
   sudo: yes
-  sudo_user: isucon
+  sudo_user: vagrant
   tasks:
     - git:
         repo=https://github.com/isucon/isucon5-qualify.git
@@ -20,5 +20,5 @@
   sudo: yes
   gather_facts: no
   tasks:
-    - copy: src=../files/env.bench.sh dest=/home/isucon/env.bench.sh owner=isucon mode=644
-    - copy: src=../files/bench.sh dest=/home/isucon/bench.sh owner=isucon mode=755
+    - copy: src=../files/env.bench.sh dest=/home/isucon/env.bench.sh owner=vagrant mode=644
+    - copy: src=../files/bench.sh dest=/home/isucon/bench.sh owner=vagrant mode=755
