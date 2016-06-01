@@ -88,4 +88,4 @@
     # TODO: - nodejs (systemd)
 
     - name: default application selection
-      service: name=isuxi.go state=running enabled=true
+      service: name=isuxi.python state=running enabled=true
