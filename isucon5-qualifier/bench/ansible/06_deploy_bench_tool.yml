@@ -5,7 +5,7 @@
   sudo_user: vagrant
   tasks:
     - name: update certificate
-      command: update-ca-certificates -f
+      shell: sudo update-ca-certificates -f
     - git:
         repo=https://github.com/isucon/isucon5-qualify.git
         dest=/home/isucon/isucon5-qualify
