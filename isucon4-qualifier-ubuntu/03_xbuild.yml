@@ -32,17 +32,17 @@
       args:
         creates: /home/isucon/.local/python/bin/gunicorn
     # perl
-    - shell: /home/isucon/.xbuild/perl-install 5.20.0 /home/isucon/.local/perl; test -x /home/isucon/.local/perl/bin/perl
-      args:
-        creates: /home/isucon/.local/perl/bin/perl
-    - command: /home/isucon/env.sh carton install
-      args:
-        chdir: /home/isucon/webapp/perl
+    # - shell: /home/isucon/.xbuild/perl-install 5.20.0 /home/isucon/.local/perl; test -x /home/isucon/.local/perl/bin/perl
+    #   args:
+    #     creates: /home/isucon/.local/perl/bin/perl
+    # - command: /home/isucon/env.sh carton install
+    #   args:
+    #     chdir: /home/isucon/webapp/perl
 
     # php
-    - command: /home/isucon/.xbuild/php-install 5.6.0 /home/isucon/.local/php
-      args:
-        creates: /home/isucon/.local/php/bin/php
-    - shell: |
-        cp /tmp/isucon4/qualifier/ami/files/php.ini /home/isucon/.local/php/etc/php.ini
-        chown isucon:isucon /home/isucon/.local/php/etc/php.ini
+    # - command: /home/isucon/.xbuild/php-install 5.6.0 /home/isucon/.local/php
+    #   args:
+    #     creates: /home/isucon/.local/php/bin/php
+    # - shell: |
+    #     cp /tmp/isucon4/qualifier/ami/files/php.ini /home/isucon/.local/php/etc/php.ini
+    #     chown isucon:isucon /home/isucon/.local/php/etc/php.ini
