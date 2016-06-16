@@ -21,7 +21,7 @@
     - command: rm -rf /tmp/isucon
       args:
         removes: /tmp/isucon
-    - file: path=/tmp/isucon state=directory 
+    - file: path=/tmp/isucon state=directory
     - shell: rsync -a /tmp/isucon4/qualifier/sql /tmp/isucon/
     - shell: rsync -a /tmp/isucon4/qualifier/webapp /tmp/isucon/
     - shell: |
@@ -36,6 +36,7 @@
     - command: chown -R isucon:isucon /tmp/isucon
     - command: rsync -avz --delete --exclude-from=/tmp/isucon4/qualifier/ami/files/rsync_exclude.txt /tmp/isucon/ /home/isucon/
       sudo: yes
+    - command: chmod -R 777 /var/log
   post_tasks:
     - command: ./init.sh
       sudo_user: isucon
