@@ -13,4 +13,4 @@
         - restart supervisord
   handlers:
     - name: restart supervisord
-      action: service name=supervisor state=restarted
+      action: service name=supervisor state=started

@@ -30,3 +30,4 @@
         - libxslt1-dev
         - mysql-server
         - libmysqlclient-dev
+        - pkg-config
